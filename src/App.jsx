@@ -6,13 +6,15 @@ import About from './components/About';
 
 export default function App() {
     return (
-        <div className="min-h-screen flex flex-col md:">
+        <div className="min-h-screen flex flex-col md:flex-row">
             <Navbar />
+            <main className="flex-1 md:pl-64 min-h-screen pb-24 md:pb-0">
             <Routes>
                 <Route path="/" element={<Discovery />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/about" element={<About />} />
             </Routes>
+            </main>
         </div>
     )
 }
