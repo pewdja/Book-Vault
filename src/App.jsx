@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Discovery from './components/Discovery';
 import Library from './components/Library';
 import About from './components/About';
+import NotFound from './components/NotFound';
 
 export default function App() {
     return (
@@ -13,6 +14,7 @@ export default function App() {
                 <Route path="/" element={<Discovery />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             </main>
         </div>
