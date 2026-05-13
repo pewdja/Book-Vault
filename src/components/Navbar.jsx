@@ -16,7 +16,7 @@ import { motion } from "motion/react";
         <div className="flex flex-col gap-4">
             {navItems.map((item) => (
                 <NavLink
-                    key={item.name}
+                    key={item.path}
                     to={item.path}
                     className={({ isActive }) =>
                         `relative flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
@@ -27,7 +27,7 @@ import { motion } from "motion/react";
                     {({ isActive }) => (
                         <>
                             <item.icon size={20} />
-                            <span>{item.name}</span>
+                            <span>{item.label}</span>
                             {isActive && (
                                 <motion.div
                                     layoutId="sidebar-active"
