@@ -3,15 +3,15 @@ import { BookMarked, Search, Info, Library } from "lucide-react";
 import { motion } from "motion/react";
  export default function Navbar() {
     const navItems = [
-        { name: "Discovery", icon: <Search />, path: "/" },
-        { name: "Library", icon: <Library />, path: "/library" },
-        { name: "About", icon: <Info />, path: "/about" },
+      { path: "/", label: "Discovery", icon: Search },
+    { path: "/library", label: "My Library", icon: Library },
+    { path: "/about", label: "About", icon: Info },
     ];
     return (
     <aside className="fixed left-0 top-0 bottom-0 w-64 bg-white border-r border-brand-stone/10 flex-col p-6 z-50 flex shadow-sm">
-        <NavLink to="/" className="flex items-center gap-2 mb-8">
-            <BookMarked className="text-brand-orange" />
-            <span className="text-xl font-bold text-gray-800">Book Vault</span>
+        <NavLink to="/" className="flex items-center gap-2 text-brand-stone hover:text-brand-amber transition-colors mb-10 px-2">
+            <BookMarked size={32} className="text-brand-amber" />
+            <span className="font-serif font-bold text-2xl tracking-tight italic">Book Vault</span>
         </NavLink>
         <div className="flex flex-col gap-4">
             {navItems.map((item) => (
