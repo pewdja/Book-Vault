@@ -13,7 +13,7 @@ export default function NotFound() {
       </p>
       <button 
         onClick={() => navigate("/")}
-        className="btn-primary"
+      className="px-8 py-3 bg-brand-amber text-white rounded-full font-medium hover:scale-105 transition-transform duration-300 shadow-md cursor-pointer"
       >
         Return to Discovery
       </button>

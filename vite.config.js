@@ -5,4 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 // vite.dev
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 })
